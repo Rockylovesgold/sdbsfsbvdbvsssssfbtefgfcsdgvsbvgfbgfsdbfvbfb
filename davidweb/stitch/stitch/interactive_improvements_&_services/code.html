@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hull Web Fixers - Improvements &amp; Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#13b6ec",
+                "background-light": "#f6f8f8",
+                "background-dark": "#101d22",
+                "surface-dark": "#1c282d",
+                "surface-light": "#ffffff",
+                },
+                fontFamily: {
+                "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        /* Custom range slider styling for the comparison effect */
+        input[type=range]::-webkit-slider-thumb {
+            pointer-events: all;
+            width: 40px;
+            height: 40px;
+            -webkit-appearance: none;
+            background-color: #13b6ec;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(19, 182, 236, 0.3);
+            cursor: ew-resize;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23101d22' width='24' height='24'%3E%3Cpath d='M15 6L9 12L15 18' stroke='%23101d22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9 6L3 12L9 18' stroke='%23101d22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' display='none'/%3E%3Cpath d='M21 6L15 12L21 18' stroke='%23101d22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' display='none'/%3E%3Cpath d='M8 12h8' stroke='%23101d22' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M7 12l3-3m-3 3l3 3m10-3l-3-3m3 3l-3 3' stroke='%23101d22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 20px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-slate-200 dark:border-[#283539] bg-background-light/80 dark:bg-[#111618]/80 backdrop-blur-md px-6 py-4 lg:px-10">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">build_circle</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Hull Web Fixers</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex cursor-pointer items-center justify-center rounded-xl h-10 px-6 bg-primary text-[#101d22] text-sm font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all hover:-translate-y-0.5">
+<span>Get Free Audit</span>
+</button>
+</div>
+<button class="md:hidden text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col items-center w-full px-4 py-12 lg:px-8">
+<!-- Hero / Intro -->
+<div class="max-w-4xl w-full text-center mb-12">
+<h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
+                See the Difference We Make
+            </h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                Drag the slider to see how we transform cluttered, slow sites into high-performance client magnets.
+            </p>
+</div>
+<!-- Interactive Comparison Section -->
+<section class="w-full max-w-6xl mb-24 flex flex-col items-center">
+<!-- Project Context Switcher -->
+<div class="inline-flex p-1 mb-8 bg-slate-200 dark:bg-[#1c282d] rounded-xl">
+<button class="px-6 py-2.5 rounded-lg text-sm font-medium transition-all bg-white dark:bg-primary text-slate-900 dark:text-[#101d22] shadow-sm">
+                    Local Trades
+                </button>
+<button class="px-6 py-2.5 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+                    Cafe
+                </button>
+<button class="px-6 py-2.5 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+                    Consultant
+                </button>
+</div>
+<!-- Before / After Container -->
+<div class="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-slate-200 dark:border-slate-800 group select-none">
+<!-- "After" Image (Background) -->
+<div class="absolute inset-0 w-full h-full bg-slate-900">
+<img alt="Clean modern dashboard interface with charts" class="w-full h-full object-cover opacity-90" data-alt="Modern clean web design interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuHm8PgDkpGft1EFfPy6vugBzARK9pIjbwI5srd438MHREzFUX_ljEZ7AWtAV39k_bY1ayqrXQgjR4Q-WmmQGrFzguola5QrPlQ8lPFgSQGi9voOiwhuS3XnTkrFka1KMSZgwTyrbAGE7GkYFOvPcLgtwCcOZ3yDiqT7XmXI12T0UotSGuQFtRRxkT1LU9MzQqI3Mwi--U4ScCItMSMAuMvRWdE7xMy8J3cN-Gi_MFQpH7Iu29ddJr_Fgt0zCw9GGIHxcLm4S0Dq8"/>
+<div class="absolute top-4 right-4 bg-primary/90 text-[#101d22] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm shadow-lg">
+                        After
+                    </div>
+</div>
+<!-- "Before" Image (Foreground, clipped) -->
+<div class="absolute inset-0 w-1/2 h-full bg-slate-100 overflow-hidden border-r-4 border-primary z-10" id="comparison-overlay" style="width: 50%;">
+<img alt="Messy colorful old website layout on a monitor" class="absolute top-0 left-0 max-w-none h-full w-[200%] md:w-[200%] object-cover object-left filter sepia-[.4] contrast-125 saturate-50" data-alt="Cluttered old website design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwVID34gC9AMq1NwOwGFVT93z-MYC_Lg8Mfg0G9G0t27NNkx6gONnHzypEiSTAHVAKy9-E9h9hZZmk27sfpiB5tnTIS0X-4f7Ll94KVgIsn1jJzDm-MWebMBBZqxKvcRUYj0QM1l66BMVLvOiumT5oLPATHNV0SPSD16E9hVDqIHI6Jp1rMwxbNQAZIs6TvDIjOJCxqfCp5Kg-_E8SMAaId5qfRxQVkyGD_6n1epHm5V3w0C4a-9jpGV4KXpHDeOTexdSMBB2EhQw"/>
+<div class="absolute top-4 left-4 bg-slate-800/90 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm shadow-lg">
+                        Before
+                    </div>
+</div>
+<!-- Slider Handle Control -->
+<!-- Note: In a real implementation, JS would bind this range input to the width of the overlay div -->
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 hover:cursor-ew-resize" max="100" min="0" oninput="document.getElementById('comparison-overlay').style.width = this.value + '%'; document.getElementById('slider-handle').style.left = this.value + '%'" type="range" value="50"/>
+<!-- Visual Handle (Purely cosmetic, follows the logic) -->
+<div class="absolute top-0 bottom-0 w-10 -ml-5 flex items-center justify-center pointer-events-none z-20 transition-none" id="slider-handle" style="left: 50%;">
+<div class="h-10 w-10 bg-primary rounded-full shadow-[0_0_15px_rgba(19,182,236,0.6)] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#101d22] text-xl font-bold">code</span>
+</div>
+</div>
+</div>
+<p class="mt-4 text-sm text-slate-500 dark:text-slate-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">touch_app</span>
+                Drag the handle to compare
+            </p>
+</section>
+<!-- Services Grid Section -->
+<section class="w-full max-w-6xl">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Comprehensive Optimization Services</h2>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+                    We don't just fix bugs; we elevate your entire digital presence with a suite of professional services designed for growth.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service Card 1: Speed -->
+<div class="group relative p-6 bg-white dark:bg-[#1c282d] rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(19,182,236,0.1)]">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-[#101d22] transition-colors">
+<span class="material-symbols-outlined text-2xl">speed</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Speed Optimization</h3>
+<ul class="space-y-2 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Advanced caching strategies
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Image compression &amp; lazy loading
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Code minification
+                            </li>
+</ul>
+<a class="inline-flex items-center text-sm font-bold text-primary hover:text-primary/80 group-hover:gap-2 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 2: Fixes -->
+<div class="group relative p-6 bg-white dark:bg-[#1c282d] rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(19,182,236,0.1)]">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-[#101d22] transition-colors">
+<span class="material-symbols-outlined text-2xl">handyman</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Critical Fixes</h3>
+<ul class="space-y-2 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Broken link repair
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Layout bug resolution
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Mobile responsiveness issues
+                            </li>
+</ul>
+<a class="inline-flex items-center text-sm font-bold text-primary hover:text-primary/80 group-hover:gap-2 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 3: Redesign -->
+<div class="group relative p-6 bg-white dark:bg-[#1c282d] rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(19,182,236,0.1)]">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-[#101d22] transition-colors">
+<span class="material-symbols-outlined text-2xl">palette</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Modern Redesign</h3>
+<ul class="space-y-2 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                UI/UX modernization
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Branding alignment
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Conversion-focused layouts
+                            </li>
+</ul>
+<a class="inline-flex items-center text-sm font-bold text-primary hover:text-primary/80 group-hover:gap-2 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 4: SEO -->
+<div class="group relative p-6 bg-white dark:bg-[#1c282d] rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(19,182,236,0.1)]">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-[#101d22] transition-colors">
+<span class="material-symbols-outlined text-2xl">travel_explore</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Technical SEO</h3>
+<ul class="space-y-2 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Meta tag optimization
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Schema markup implementation
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Sitemap &amp; robots.txt config
+                            </li>
+</ul>
+<a class="inline-flex items-center text-sm font-bold text-primary hover:text-primary/80 group-hover:gap-2 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 5: Accessibility -->
+<div class="group relative p-6 bg-white dark:bg-[#1c282d] rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(19,182,236,0.1)]">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-[#101d22] transition-colors">
+<span class="material-symbols-outlined text-2xl">accessibility_new</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Accessibility</h3>
+<ul class="space-y-2 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                WCAG compliance audit
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Screen reader optimization
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Color contrast adjustments
+                            </li>
+</ul>
+<a class="inline-flex items-center text-sm font-bold text-primary hover:text-primary/80 group-hover:gap-2 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 6: Security -->
+<div class="group relative p-6 bg-white dark:bg-[#1c282d] rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(19,182,236,0.1)]">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-[#101d22] transition-colors">
+<span class="material-symbols-outlined text-2xl">security</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Security Hardening</h3>
+<ul class="space-y-2 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                SSL certificate setup
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Malware scanning &amp; removal
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+                                Firewall configuration
+                            </li>
+</ul>
+<a class="inline-flex items-center text-sm font-bold text-primary hover:text-primary/80 group-hover:gap-2 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
